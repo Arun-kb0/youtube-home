@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="./style.css" rel="stylesheet" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="./script.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Youtube</title>
 </head>
@@ -19,7 +22,7 @@
 <body>
     <header class="navbar">
         <div class="logo">
-            <img src="./YouTube.png"/>
+            <img src="images/Youtube.png" />
         </div>
 
         <div class="searchInput">
@@ -47,16 +50,84 @@
     </header>
 
 
-    <div>
-        <div class="contents">
+    <section class="main-section">
+
+
+
+        <section class="buttons">
+
+            <div class="btn-container">
+                <img class="btn-img" src="./images/home.svg" />
+                <small class="home-text">Home</small>
+            </div>
+
+
+            <div class="btn-container">
+                <img class="btn-img" src="./images/shorts.svg" />
+                <small>Shorts</small>
+            </div>
+
+            <div class="btn-container">
+                <img class="btn-img" src="./images/subscriptions.svg" />
+                <small class="sub-text">Subscriptions</small>
+            </div>
+
+            <div class="btn-container">
+                <img class="btn-img" src="./images/library.svg" />
+                <small>Library</small>
+            </div>
+
+
+        </section>
+
+        <section class="suggestions">
+            <a class="sug-text">All</a>
+            <a class="sug-text">Trailer</a>
+            <a class="sug-text">Ted ed</a>
+            <a class="sug-text">live</a>
+
+
+        </section>
+
+        <section class="contents">
+
             <div class="content">
-                <iframe width="420" height="315" 
-                    src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+               
+                <iframe class="video"  src="https://www.youtube.com/embed/_38JDGnr0vA">
+                </iframe>
+            </div>
+            <div class="content">
+
+                <iframe class="video" src="https://www.youtube.com/embed/p7OUQ9U2qIw"></iframe>
                 </iframe>
             </div>
 
-        </div>
-    </div>
+            <div class="content">
+
+                <iframe class="video" src="https://www.youtube.com/embed/3rQi2uNqwxk">
+                </iframe>
+            </div>
+
+            <div class="content">
+
+                <iframe class="video" src="https://www.youtube.com/embed/xfZhb6lmxjk">
+                </iframe>
+            </div>
+
+            <div class="content">
+
+                <iframe class="video" src="https://www.youtube.com/embed/30r45P1JFys">
+                </iframe>
+            </div>
+
+            <div class="content video">
+                <iframe class="video" src="https://www.youtube.com/embed/lOEJOv-jeLY"></iframe>
+                </iframe>
+            </div>
+
+
+        </section>
+    </section>
 </body>
 
 </html>
