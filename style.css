@@ -2,6 +2,23 @@
     font-family: Roboto, Arial, sans-serif;
 }
 
+
+/*scroll bar*/
+
+::-webkit-scrollbar {
+    width: 10px
+}
+
+::-webkit-scrollbar-track {
+   /* box-shadow: inset 0 0 5px grey; */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #717171;
+    border-radius: 10px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -14,17 +31,23 @@ i:hover {
 }
 
 /*navbar*/
+header {
+    position: fixed;
+    z-index: 30;
+}
+
 .navbar {
     background: #0f0f0f;
     width: 100%;
     height: 61px;
-    display: flex
+    display: inline-flex;
+    z-index: 30;
 }
 
 
 .logo {
     display: flex;
-    margin-left: 65px;
+    margin-left: 72px;
     height: 122%;
     margin-bottom: 54px;
     margin-top: -6px;
@@ -149,28 +172,30 @@ i:hover {
 /*video section*/
 .main-section {
     display: flex;
+    padding-top: 44px;
 }
 
 .contents {
 
     margin: 5px;
-    margin-left: 20px;
+    margin-left: 64px;
     margin-top: 58px;
     display: flex;
     flex-wrap: wrap;
-
 }
+
 
 .content {
     padding: 5px;
 }
-.content:hover{
+
+.content:hover {
     transform: scale(1.2);
     transition: 0.2s;
     z-index: 1;
-    position:relative;
+    position: relative;
 
-   
+
 }
 
 .content>iframe {
@@ -181,69 +206,145 @@ i:hover {
 
 }
 
-/*buttons*/
-.buttons {
-
-    color: #fff;
-    width: 70px;
-    height: 278px;
-    padding: 4px;
-}
-
-
-
-.btn-container {
-    padding: 7px;
-    position: relative;
-
-}
-
-.btn-img {
-    height: 25px;
-    padding-left: 5px;
-    padding: 21px;
-    border: none;
-    border-radius: 12px;
-    padding-bottom: 21px;
-}
-
-.btn-img:hover {
-    background-color: #6e6e6e;
-    cursor: pointer;
-}
-
-.btn-container >small {
-    font-size: 11px;
-    position: absolute;
-    margin-top: -23px;
-    margin-left: 10px;
-    padding-left: 7px;
-}
-
-
-.btn-container> .sub-text{
-   
-    margin-left: -6px;
-}
-
 
 /*sugetions*/
-.suggestions{
+.suggestions {
     position: absolute;
     color: whitesmoke;
-    
+
     margin-left: 112px;
     margin-top: 27px;
 }
 
-.sug-text{
+.sug-text {
     padding: 5px;
     border: none;
     border-radius: 6px;
-    background: #222222
+    background: #222222;
+    margin-left: 5px;
 }
 
-.sug-text:hover{
+.sug-text:hover {
     background: #6e6e6e;
     cursor: pointer;
 }
+
+
+
+/*sidebar*/
+.navigation .icon{
+    width:25px;
+    height: 20px;
+}
+
+.navigation{
+    z-index: 20;
+    position: relative;
+    top: 22px;
+    left: 19px;
+    bottom: 20px;
+    width: 75px;
+    border-radius: 10px;
+    box-sizing: initial;
+    /*border-left: 5px solid #6e6e6e;*/
+
+    background: #0f0f0f;
+    background:#717171;
+    transition: width 0.5s;
+    overflow-x: hidden;
+}
+
+.navigation.active{
+    width: 300px;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 0px;
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width:100%;
+    border-radius: 10px;
+
+}
+
+.list:hover{
+    background: #222222;
+}
+
+.navigation .active {
+    background-color: #222222;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display:flex;
+    text-decoration: none;
+    color:#fff
+}
+
+.navigation .active a{
+    color: #6e6e6e;
+}
+
+.navigation ul li a .icon{
+    position:relative;
+    display: block;
+    min-width: 27px;
+    height: 42px;
+    line-height: 60px;
+    text-align: center;
+
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    margin-top: -2px;
+    padding-left: 10px;
+    height: 42px;
+    line-height: 60px;
+    white-space:normal;
+    
+}
+
+/* hamberger btn  */
+.ham-btn{
+    position: fixed;
+    top: 12px;
+    right: 96%;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+
+                                        
+}
+
+.ham-btn.active{
+    /*background: blue; */
+}
+
+.ham-btn i{
+    position: absolute;
+    color: #6e6e6e;
+    font-size: 29px;
+    top: 5px;
+
+}
+
+.ham-btn:hover{
+    background: #0f0f0f;
+}
+
+ 
